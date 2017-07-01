@@ -1,4 +1,4 @@
-# Envs
+# Envs : [DOWNLOAD](https://github.com/AntonKrynytskyi/Envs/raw/master/envs.zip)
 ## Little utility for get common info about  CQ/AEM instances, which have been running. 
 
 ### Step #1
@@ -36,3 +36,4 @@
 |>>>>>>>>>>[2]
 <user>@<user>:~$
 ```
+[Link for DOWNLOAD JAR+Bash-script](https://github.com/AntonKrynytskyi/Envs/raw/master/envs.zip)
