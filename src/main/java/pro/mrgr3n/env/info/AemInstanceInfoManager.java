@@ -11,6 +11,7 @@ public class AemInstanceInfoManager {
     private static final String N_A = "N/A";
     private static final String ADDRESS = "address";
     private static final String DSLING_RUN_MODES = "Dsling.run.modes";
+    private AemInstanceInfoValidator validator = new AemInstanceInfoValidator();
 
     public static BufferedReader runConsoleCommand(String getAllProcessInfoCommand) throws IOException {
         Process p = Runtime.getRuntime().exec(getAllProcessInfoCommand);
@@ -26,9 +27,13 @@ public class AemInstanceInfoManager {
         String processStr;
         while ((processStr = input.readLine()) != null) {
             if (isAemProcess(processStr)) {
-                aemInstancesList.add(getAemInstanceInfo(getParams(processStr)));
+                AemInstanceInfo aemInstanceInfo = getAemInstanceInfo(getParams(processStr));
+                if (validator.isValid(aemInstanceInfo)) {
+                    aemInstancesList.add(aemInstanceInfo);
+                }
             }
         }
+
         return aemInstancesList;
     }
 
