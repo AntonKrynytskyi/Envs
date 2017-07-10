@@ -4,7 +4,7 @@
 
   <groupId>pro.mrgr3n.env.info</groupId>
   <artifactId>env-info</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
     <build>
         <plugins>
             <plugin>
